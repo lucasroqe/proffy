@@ -1,0 +1,143 @@
+/* PÁGINA INICIAL, AO ENTRAR NO SITE */
+#page-landing{
+    background: var(--color-primary);
+}
+
+#page-landing #container{
+    color: var(--color-text-in-primary);
+}
+
+.logo-container{
+    text-align: center;
+    margin-bottom: 3.2rem; 
+}
+
+.logo-container h2{
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    margin-top: 1.5rem;
+}
+
+
+.logo-container img{
+    height: 7rem;
+}
+
+.hero-image{
+    width: 100%;
+}
+
+.buttons-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem 0;
+}
+
+.buttons-container a{
+    width: 50rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    margin: 0 0.6rem;
+    font: 500 1.6rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    color: var(--color-button-text);
+}
+
+.buttons-container a.study{
+    background-color: var(--color-primary-lighter);
+    
+}
+
+.buttons-container a.study:hover{
+    background-color: var(--color-primary-light);
+    transition: 0.3s;
+}
+
+.buttons-container a.give-classes{
+    background-color: var(--color-secondary);
+}
+
+.buttons-container a.give-classes:hover{
+    background-color: var(--color-secondary-dark);
+    transition: 0.3s;
+}
+
+.buttons-container a img{
+    width: 2.2rem;
+    margin: 0.4rem;
+}
+
+.total-connections{
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img{
+    margin-left: 0.3rem;
+}
+
+
+@media (min-width: 1100px) {
+     #page-landing #container{
+         max-width: 1100px;
+         display: grid;
+         grid-template-columns: 2fr 1fr 2fr;
+         grid-template-rows: 350px 1fr;
+         grid-template-areas: 
+         'proffy image image'
+         'button button texting';
+         gap: 50px;
+     }
+
+     .logo-container{
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center;
+     }
+
+     .logo-container img{
+         height: 100%;
+         width: 100%;
+     }
+
+     .hero-image{
+        grid-area: image;
+     }
+
+     .buttons-container{
+        grid-area: button;
+        justify-content: flex-start;
+        
+     }
+
+     .total-connections{
+        grid-area: texting;
+        justify-self: end;
+     }
+}
+
+
+@media (min-width: 700px){
+    :root{
+        font-size: 62.5%;
+        
+    }
+}
+
+@media (min-width: 699px){
+    :root{
+        font-size: 80%;
+        
+    }
+}
